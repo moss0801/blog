@@ -30,7 +30,7 @@
 }
 
 .container a:hover {
-  color: #F16060
+  color: rgb(241, 96, 96);
 }
 
 /* iPad 가로 */
@@ -40,8 +40,8 @@
     font-size: 1.2em;
   }
 
-  .container .header {
-    margin-top: 30px;
+  header {
+    margin-top: 10px;
     margin-bottom: 20px;
   }
 }
@@ -53,7 +53,7 @@
     width: 100%;
   }
 
-  .container .header {
+  header {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -64,7 +64,8 @@
 
 /* (s) header */
 header {
-  margin-top: 70px; margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 /* (e) header */
@@ -72,7 +73,7 @@ header {
 /* (s) Adsense */
 #top-adsense {
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 @media(max-width: 500px) { 
   #top-adsense div:first-child { padding-left: 0px; padding-right: 0; }
@@ -95,7 +96,7 @@ header {
 /* (s) article */
 
 article {
-  margin-top: 80px;
+  margin-top: 25px;
 }
 
 article h1, h2, h3, h4, h5 {
@@ -103,29 +104,31 @@ article h1, h2, h3, h4, h5 {
 }
 
 article h1 {
-  color: #F16060;
+  color: rgb(0, 170, 227);
+  font-size: 2em;
 }
 
 /* (e) article */
 
 /* (s) article-category */
 .article-category {
-  width: 320px;
+  width: 200px;
   text-align: center;
   margin: 0 auto;
   font-size: 1em;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
 .article-category, .article-category a {
-  color: #999;
+  color: rgb(153, 153, 153);
 }
 
 /* (e) article-category */
 
 /* (s) article-title */
 .article-title {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
   text-align: center;
   line-height: 1.3em;
@@ -140,4 +143,10 @@ article h1 {
 }
 /* (e) article-title */
 
-
+/* (s) article-date */
+.article-date {
+  text-align: right;
+  color: rgb(153, 153, 153);
+  font-size: 0.9em;
+}
+/* (e) article-date */
