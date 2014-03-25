@@ -11,35 +11,60 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+/* (s) global */
 /* 데스크 탑 및 고해상도 */
 .container {
-  font-family: 'NanumGothic', 'Open Sans', 'Malgun Gothic';
-  padding-right: 25px;
-  padding-left: 25px;
+  font-family: 'Open Sans', 'NanumGothic', 'Malgun Gothic';
+  margin-right: 25px;
+  margin-left: 25px;
   font-size: 1.3em;
   max-width: 780px;
   margin: 0 auto;
   line-height: 1.6em;
-  border: 1px solid;
 }
 
 .container a {
+  text-decoration: none;
   cursor: pointer;
 }
 
 .container a:hover {
-  border-bottom: 1px dotted;
-  font-weight: bold;
-  text-decoration: none;
+  color: #F16060
 }
+
+/* iPad 가로 */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  .container .header {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+/* 스마트 폰 및 iPad 가로 */
+@media only screen and (max-width: 768px) {
+  .container {
+    font-size: 1.1em;
+    width: 100%;
+  }
+
+  .container .header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+/* (e) global */
 
 /* (s) header */
 header {
   margin-top: 70px; margin-bottom: 30px;
-}
-
-header .site-title a:hover {
-  border-bottom: none;
 }
 
 /* (e) header */
@@ -53,11 +78,11 @@ header .site-title a:hover {
   #top-adsense div:first-child { padding-left: 0px; padding-right: 0; }
 }
 
-.top-left-adsense { width: 336px; height: 280px; border: 1px solid; }
+.top-left-adsense { width: 336px; height: 280px; }
 @media(max-width: 500px) { 
   .top-left-adsense { width: 320px; height: 50px; } }
 
-.top-right-adsense { width: 336px; height: 280px; border: 1px solid; }
+.top-right-adsense { width: 336px; height: 280px; }
 @media(max-width: 767px) { 
   .top-right-adsense { width: 320px; height: 50px; } 
   #top-right-adsense { display: none; }
@@ -67,43 +92,52 @@ header .site-title a:hover {
 @media(max-width: 500px) { .my_adslot { width: 320px; height: 50px; } }
 /* (e) Adsense */
 
+/* (s) article */
+
+article {
+  margin-top: 80px;
+}
+
+article h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+article h1 {
+  color: #F16060;
+}
+
+/* (e) article */
+
 /* (s) article-category */
 .article-category {
   width: 320px;
   text-align: center;
   margin: 0 auto;
-  font-size: 0.6em;
+  font-size: 1em;
+  margin-bottom: 20px;
 }
 
 .article-category, .article-category a {
-  color: #999 !important;
+  color: #999;
 }
 
 /* (e) article-category */
 
-/* iPad 가로 */
-@media only screen and (max-width: 1200px) {
-  .container {
-    width: 100%;
-    font-size: 1.5em;
-  }
-
-  .container .header {
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
+/* (s) article-title */
+.article-title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3em;
 }
 
-/* 스마트 폰 및 iPad 가로 */
-@media only screen and (max-width: 768px) {
-  .container {
-    font-size: 1.26em;
-    width: 100%;
-  }
-
-  .container .header {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
+.article-title * {
+  color: rgb(241, 96, 96);
 }
+
+.article-title a:hover {
+  color: rgba(241, 96, 96, 0.8);
+}
+/* (e) article-title */
+
+
