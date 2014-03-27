@@ -27,7 +27,7 @@
   font-size: 1.3em;
   max-width: 780px;
   margin: 0 auto;
-  line-height: 1.6em;
+  line-height: 1.428571429em;
 }
 
 .container a {
@@ -55,7 +55,7 @@
 /* 스마트 폰 및 iPad 가로 */
 @media only screen and (max-width: 768px) {
   .container {
-    font-size: 1.1em;
+    font-size: 1.2em;
     width: 100%;
   }
 
