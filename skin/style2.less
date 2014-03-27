@@ -1,0 +1,160 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+@import "variables.less";
+
+@font-family-base: 'Open Sans', 'NanumGothic', 'Malgun Gothic';
+@animation-base: all 0.3s ease-in-out;
+@margin-center: 0 auto;
+@container-width: 780px;
+@gray-hover: rgb(153, 153, 153);
+@moss-red: rgb(241, 96, 96);
+@moss-red-hover: rgba(241, 96, 96, 0.8);
+
+/* 우측 상단 메뉴바 숨기기 */
+#tistorytoolbarid { display: none; }
+
+* {
+  -moz-transition: @animation-base;
+  -webkit-transition: @animation-base;
+  -o-transition: @animation-base;
+  transition: @animation-base;
+}
+
+/* (s) global */
+.container {
+  font-family: 'Open Sans', 'NanumGothic', 'Malgun Gothic';
+  margin-right: 25px;
+  margin-left: 25px;
+  font-size: @font-size-base;
+  max-width: 100%;
+  margin: @margin-center;
+  line-height: @line-height-base;
+}
+
+.container a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container a:hover {
+  color: @moss-red;
+}
+
+@media (min-width: @screen-sm-min) {
+}
+
+@media (min-width: @screen-md-min) {
+  .container {
+    max-width: @container-width;
+  }
+}
+/* (e) global */
+
+/* (s) header */
+header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: @screen-sm-min) {
+  header {
+    text-align: left;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+}
+/* (e) header */
+
+/* (s) article */
+
+article {
+  margin-top: 25px;
+}
+
+article h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+/* (e) article */
+
+/* (s) article-category */
+.article-category {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.article-category, .article-category a {
+  color: @gray-light;
+}
+
+/* (e) article-category */
+
+/* (s) article-title */
+.article-title {
+  font-size: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.article-title * {
+  color: @moss-red;
+}
+
+.article-title a:hover {
+  color: @moss-red-hover;
+}
+
+@media(min-width: @screen-xs-min) { 
+  .article-title {
+    font-size: 2.5em;
+  }
+}
+/* (e) article-title */
+
+/* (s) article-date */
+.article-date {
+  text-align: right;
+  color: @gray-light;
+  font-size: 0.9em;
+}
+/* (e) article-date */
+
+/* (s) Top Adsense */
+#top-adsense {
+  text-align: center;
+  margin: 10px auto;
+}
+
+@media(min-width: @screen-xs-min) { 
+  #top-adsense div:first-child { padding-left: 0px; padding-right: 0px; }
+}
+
+.top-left-adsense { width: 320px; height: 50px; }
+@media(min-width: @screen-xs-min) { .top-left-adsense { width: 468px; height: 60px; } }
+@media(min-width: @screen-sm-min) { .top-left-adsense { width: 336px; height: 280px; } }
+
+.top-right-adsense { width: 320px; height: 50px; } 
+#top-right-adsense { display: none; }
+@media(min-width: @screen-xs-max) { 
+  .top-right-adsense { width: 336px; height: 280px; }
+  #top-right-adsense { display: block; }
+}
+/* (e) Top Adsense */
+
+/* (s) bottom-adsens */
+.my_adslot { width: 320px; height: 50px; }
+@media(min-width: @screen-xs-min) { .my_adslot { width: 468px; height: 60px; } }
+@media(min-width: @screen-sm-min) { .my_adslot { width: 728px; height: 90px; } }
+
+#bottom-adsense {
+  text-align: center;
+  margin: 0 auto;
+}
+/* (e) bottom-adsens */
