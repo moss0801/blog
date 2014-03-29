@@ -9,10 +9,17 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="./images/bootstrap.min.css">
   <link rel="stylesheet" href="./style.css">
+  <!-- (s) syntaxy highlight -->
+  <link rel="stylesheet" href="./images/monokai_sublime.css">
+  <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- (e) syntaxy highlight -->
+  <!-- (s) legacy IE support -->
   <!--[if lt IE 9]>
   <script type="text/javascript" src="./images/html5shiv.js"></script>
   <script type="text/javascript" src="./images/respond.min.js"></script>
   <![endif]-->
+  <!-- (e) legacy IE support -->
 </head>
 <body>
   <s_t3>
@@ -45,32 +52,39 @@
       <s_article_rep>
         <!-- (s) content -->
         <article id="content">
-
+          <!-- (s) article catory -->
           <div class="article-category">
             <a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
           </div>
-          <div class="article-title">
+          <!-- (e) article catory -->
+          <!-- (s) article title -->
+          <h1>
             <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
-          </div>
+          </h1>
+          <!-- (e) article title -->
+          <!-- (s) article date -->
           <div class="article-date">[##_article_rep_date_##]</div>
+          <!-- (e) article date -->
+          <!-- (s) article admin -->
+          <div class="titleWrap">
+            <s_ad_div>
+              <div class="admin">
+                <a href="[##_s_ad_m_link_##]">수정</a>
+                :
+                <a href="#" onclick="[##_s_ad_m_onclick_##]">수정(창으로)</a>
+                | 
+              ([##_s_ad_s1_label_##])→
+                <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a>
+                |
+                <a href="#" onclick="[##_s_ad_t_onclick_##]">관련글(트랙백)</a>
+                |
+                <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+              </div>
+            </s_ad_div>
+          </div>
+          <!-- (e) article admin -->
+          <!-- (s) article entry -->
           <div class="entry">
-            <div class="titleWrap">
-              <s_ad_div>
-                <div class="admin">
-                  <a href="[##_s_ad_m_link_##]">수정</a>
-                  :
-                  <a href="#" onclick="[##_s_ad_m_onclick_##]">수정(창으로)</a>
-                  | 
-                ([##_s_ad_s1_label_##])→
-                  <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a>
-                  |
-                  <a href="#" onclick="[##_s_ad_t_onclick_##]">관련글(트랙백)</a>
-                  |
-                  <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
-                </div>
-              </s_ad_div>
-            </div>
-
             <!-- (s) Top Adsense -->
             <hr />
             <div id="top-adsense" class="row">
@@ -114,6 +128,8 @@
             </div>
             <hr />
             <!-- (e) Bottom Adsense -->
+          </div>
+          <div>
             <!-- (s) 태그 -->
             <s_tag_label>
               <div class="tagTrail">

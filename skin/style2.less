@@ -10,9 +10,12 @@
 @gray-hover: rgb(153, 153, 153);
 @moss-red: rgb(241, 96, 96);
 @moss-red-hover: rgba(241, 96, 96, 0.8);
+@article-entry-font-size-base: 1.41em;
 
 /* 우측 상단 메뉴바 숨기기 */
 #tistorytoolbarid { display: none; }
+
+/* (s) global */
 
 * {
   -moz-transition: @animation-base;
@@ -21,15 +24,14 @@
   transition: @animation-base;
 }
 
-/* (s) global */
+
 .container {
-  font-family: 'Open Sans', 'NanumGothic', 'Malgun Gothic';
+  font-family: @font-family-base;
   margin-right: 25px;
   margin-left: 25px;
   font-size: @font-size-base;
   max-width: 100%;
   margin: @margin-center;
-  line-height: @line-height-base;
 }
 
 .container a {
@@ -96,19 +98,16 @@ article h1, h2, h3, h4, h5 {
 /* (e) article-category */
 
 /* (s) article-title */
-.article-title {
-  font-size: 1.7em;
-  font-weight: bold;
+article h1 {
   text-align: center;
-  line-height: 1.3em;
 }
 
-.article-title * {
+article h1 * {
   color: @moss-red;
 }
 
-.article-title a:hover {
-  color: @moss-red-hover;
+article h1 a:hover {
+  color: @moss-red-hover !important;
 }
 
 @media(min-width: @screen-xs-min) { 
@@ -125,6 +124,12 @@ article h1, h2, h3, h4, h5 {
   font-size: 0.9em;
 }
 /* (e) article-date */
+
+/* (s) article-entry */
+article .entry {
+  font-size: @article-entry-font-size-base;
+}
+/* (e) article-entry */
 
 /* (s) Top Adsense */
 #top-adsense {
