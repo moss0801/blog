@@ -7,10 +7,16 @@
 @animation-base: all 0.3s ease-in-out;
 @margin-center: 0 auto;
 @container-width: @screen-xs-max;
+@desktop-width-min: @screen-md-min;
 @gray-hover: rgb(153, 153, 153);
 @moss-red: rgb(241, 96, 96);
 @moss-red-hover: rgba(241, 96, 96, 0.8);
+@moss-blue: rgb(0,170,227);
 @article-entry-font-size-base: 1.41em;
+@article-entry-font-size-desktop: 1.1em;
+@line-height-base: 1.6;
+@background-color: white;
+@container-color: white;
 
 /* 우측 상단 메뉴바 숨기기 */
 #tistorytoolbarid { display: none; }
@@ -24,6 +30,9 @@
   transition: @animation-base;
 }
 
+body {
+  background: @background-color;
+}
 
 .container {
   font-family: @font-family-base;
@@ -32,6 +41,7 @@
   font-size: @font-size-base;
   max-width: 100%;
   margin: @margin-center;
+  background: @container-color;
 }
 
 .container a {
@@ -88,7 +98,6 @@ article h1, h2, h3, h4, h5 {
   margin: 0 auto;
   font-size: 1em;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .article-category, .article-category a {
@@ -99,6 +108,7 @@ article h1, h2, h3, h4, h5 {
 
 /* (s) article-title */
 article h1 {
+  margin-top: 7px;
   text-align: center;
 }
 
@@ -125,13 +135,7 @@ article h1 a:hover {
 }
 /* (e) article-date */
 
-/* (s) article-entry */
-article .entry {
-  font-size: @article-entry-font-size-base;
-}
-/* (e) article-entry */
-
-/* (s) Top Adsense */
+/* (s) top-adsense */
 #top-adsense {
   text-align: center;
   margin: 10px auto;
@@ -151,7 +155,33 @@ article .entry {
   .top-right-adsense { width: 336px; height: 280px; }
   #top-right-adsense { display: block; }
 }
-/* (e) Top Adsense */
+/* (e) top-adsense */
+
+/* (s) article entry */
+article .entry {
+  font-size: @article-entry-font-size-base;
+  line-height: @line-height-base;
+}
+
+article .entry h2 { 
+  color: @moss-red;
+  font-size: 1.5em;
+}
+
+article .entry p {
+  margin-bottom: 30px !important;
+}
+
+article .entry img {
+  
+}
+
+@media(min-width: @desktop-width-min) {
+  article .entry {
+    font-size: 1.1em;
+  }
+}
+/* (e) article entry */
 
 /* (s) bottom-adsens */
 .my_adslot { width: 320px; height: 50px; }
