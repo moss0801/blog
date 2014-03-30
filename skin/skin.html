@@ -7,7 +7,12 @@
   <meta name="description" content="안녕하세요. 개발자 Moss입니다.">
   <title>[##_title_##] :: [##_page_title_##]</title>
   <!-- Latest compiled and minified CSS -->
+  <!-- (s) jquery -->
+  <script src="./images/jquery-1.11.0.min.js"></script>
+  <!-- (e) jquery -->
   <link rel="stylesheet" href="./images/bootstrap.min.css">
+  <link rel="stylesheet" href="./images/font-awesome.min.css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="./style.css">
   <!-- (s) syntaxy highlight -->
   <link rel="stylesheet" href="./images/monokai_sublime.css">
@@ -18,11 +23,9 @@
   <!--[if lt IE 9]>
   <script type="text/javascript" src="./images/html5shiv.js"></script>
   <script type="text/javascript" src="./images/respond.min.js"></script>
+  <link rel="stylesheet" href="./images/ie8.css">
   <![endif]-->
   <!-- (e) legacy IE support -->
-  <!-- (s) jquery -->
-  <script src="./images/jquery-1.11.0.min.js"></script>
-  <!-- (e) jquery -->
   <!-- (s) 이미지 크기 조절 -->
   <script>
   $(document).ready(function() {
@@ -156,30 +159,30 @@
           <div>
             <!-- (s) 태그 -->
             <s_tag_label>
-              <div class="tagTrail">
-                <span class="tagText">TAG</span>
-                [##_tag_label_rep_##]
+              <div class="article-tag">
+                <div class="article-tag-title"><i class="fa fa-tags"></i> TAG</div>
+                <div class="article-tag-content">[##_tag_label_rep_##]</div>
               </div>
             </s_tag_label>
             <!-- (e) 태그 -->
-            <!-- (s) 트랙백과 댓글 보이기/감추기 -->
-            <div class="actionTrail">
-              <div class="actionTb">
+            <!-- (s) 트랙백 및 댓글 보이기/감추기 -->
+            <div class="action-container row">
+              <div class="trackback-show-hide col-xs-12 col-sm-6 col-md-6 col-lg-6">
                 <a href="#tb" onclick="[##_article_rep_tb_link_##]">
-                  <s_tb_count>트랙백 [[##_article_rep_tb_cnt_##]]</s_tb_count>
+                  <s_tb_count>[##_article_rep_tb_cnt_##] Trackback</s_tb_count>
                 </a>
               </div>
-              <div class="actionRp">
-                <a href="#rp" onclick="[##_article_rep_rp_link_##]">
-                  <s_rp_count>댓글 [[##_article_rep_rp_cnt_##]]</s_rp_count>
+              <div class="replay-show-hide col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <a>
+                  <s_rp_count>[##_article_rep_rp_cnt_##] Reply</s_rp_count>
                 </a>
               </div>
             </div>
-            <!-- (e) 트랙백과 댓글 보이기/감추기 -->
+            <!-- (e) 트랙백 및 댓글 보이기/감추기 -->
             <!-- (s) 트랙백 -->
             <s_tb>
               <div class="trackback">
-                <h3>Trackback Address :: [##_tb_address_##]</h3>
+                <div>Trackback Address :: [##_tb_address_##]</div>
                 <s_tb_container>
                   <ol>
                     <s_tb_rep>
@@ -208,64 +211,61 @@
             <!-- (e) 트랙백 -->
             <!-- (s) 댓글 -->
             <s_rp>
-              <div class="comment">
-                <h3>댓글을 달아 주세요</h3>
-                <!-- (s) 댓글 목록 -->
-                <div class="commentList">
-                  <s_rp_container>
-                    <ol>
-                      <s_rp_rep>
-                        <li id='[##_rp_rep_id_##]'>
-                          <div class="[##_rp_rep_class_##]">
-                            <span class="name">[##_rp_rep_name_##]</span>
-                            <span class="date">[##_rp_rep_date_##]</span>
-                            <span class="control">
-                              <a href="[##_rp_rep_link_##]" class="address">
-                                &nbsp;
-                                <span>댓글주소</span>
-                              </a>
-                              <a href="#"
-                        onclick="[##_rp_rep_onclick_delete_##]" class="modify">
-                                &nbsp;
-                                <span>수정/삭제</span>
-                              </a>
-                              <a href="#"
-                        onclick="[##_rp_rep_onclick_reply_##]" class="write">
-                                &nbsp;
-                                <span>댓글쓰기</span>
-                              </a>
-                            </span>
-                            <p>[##_rp_rep_desc_##]</p>
-                          </div>
-                          <s_rp2_container>
-                            <ul>
-                              <s_rp2_rep>
-                                <li id='[##_rp_rep_id_##]'>
-                                  <div class="[##_rp_rep_class_##]">
-                                    <span class="name">[##_rp_rep_name_##]</span>
-                                    <span class="date">[##_rp_rep_date_##]</span>
-                                    <span
-                            class="control">
-                                      <a href="[##_rp_rep_link_##]" class="address">
-                                        &nbsp;
-                                        <span>댓글주소</span>
-                                      </a>
-                                      <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">
-                                        &nbsp;
-                                        <span>수정/삭제</span>
-                                      </a>
-                                    </span>
-                                    <p>[##_rp_rep_desc_##]</p>
-                                  </div>
-                                </li>
-                              </s_rp2_rep>
-                            </ul>
-                          </s_rp2_container>
-                        </li>
-                      </s_rp_rep>
-                    </ol>
-                  </s_rp_container>
-                </div>
+              <!-- (s) 댓글 목록 -->
+              <div class="comment-list">
+                <s_rp_container>
+                  <div class="comment-container">
+                    <s_rp_rep>
+                      <div id='[##_rp_rep_id_##]'>
+                        <div class="[##_rp_rep_class_##]">
+                          <span class="name">[##_rp_rep_name_##]</span>
+                          <span class="date">[##_rp_rep_date_##]</span>
+                          <span class="control">
+                            <a href="[##_rp_rep_link_##]" class="address">
+                              &nbsp;
+                              <span>댓글주소</span>
+                            </a>
+                            <a href="#"
+                      onclick="[##_rp_rep_onclick_delete_##]" class="modify">
+                              &nbsp;
+                              <span>수정/삭제</span>
+                            </a>
+                            <a href="#"
+                      onclick="[##_rp_rep_onclick_reply_##]" class="write">
+                              &nbsp;
+                              <span>댓글쓰기</span>
+                            </a>
+                          </span>
+                          <p>[##_rp_rep_desc_##]</p>
+                        </div>
+                        <s_rp2_container>
+                          <ul>
+                            <s_rp2_rep>
+                              <div id='[##_rp_rep_id_##]'>
+                                <div class="[##_rp_rep_class_##]">
+                                  <span class="name">[##_rp_rep_name_##]</span>
+                                  <span class="date">[##_rp_rep_date_##]</span>
+                                  <span
+                          class="control">
+                                    <a href="[##_rp_rep_link_##]" class="address">
+                                      &nbsp;
+                                      <span>댓글주소</span>
+                                    </a>
+                                    <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">
+                                      &nbsp;
+                                      <span>수정/삭제</span>
+                                    </a>
+                                  </span>
+                                  <p>[##_rp_rep_desc_##]</p>
+                                </div>
+                              </div>
+                            </s_rp2_rep>
+                          </ul>
+                        </s_rp2_container>
+                      </div>
+                    </s_rp_rep>
+                  </div>
+                </s_rp_container>
                 <!-- (s) 댓글 목록 -->
                 <!-- (s) 댓글 쓰기 -->
                 <s_rp_input_form>

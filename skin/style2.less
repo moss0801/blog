@@ -7,7 +7,7 @@
 @animation-base: all 0.3s ease-in-out;
 @margin-center: 0 auto;
 @container-width: @screen-xs-max;
-@desktop-width-min: @screen-md-min;
+@desktop-width-half: 840px;  // 21인치 모니터 절반
 @gray-hover: rgb(153, 153, 153);
 @moss-red: rgb(241, 96, 96);
 @moss-red-hover: rgba(241, 96, 96, 0.8);
@@ -23,7 +23,7 @@
 
 /* (s) global */
 
-* {
+a {
   -moz-transition: @animation-base;
   -webkit-transition: @animation-base;
   -o-transition: @animation-base;
@@ -176,7 +176,7 @@ article .entry img {
   
 }
 
-@media(min-width: @desktop-width-min) {
+@media(min-width: @desktop-width-half) {
   article .entry {
     font-size: 1.1em;
   }
@@ -198,10 +198,44 @@ article .entry img {
 }
 /* (e) bottom-adsens */
 
-/* (s) 댓글 */
+/* (s) action-container */
+article .action-container {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
+article .action-container a {
+  color: @moss-red;
+}
+
+article .action-container a:hover {
+  color: @moss-red-hover;
+}
+/* (e) action-container */
+
+/* (s) trackback */
+
+/* (e) trackback */
+
+/* (s) tag */
+article .article-tag {
+  margin-bottom: 20px;
+}
+article .article-tag-title {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+article .article-tag-content {
+  text-align: center;
+}
+/* (e) tag */
+
+/* (s) 댓글 */
 .comment textarea {
   width: 100%;
 }
-
 /* (e) 댓글 */
