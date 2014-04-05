@@ -1,0 +1,27 @@
+<p>간단한 Html Decoder 입니다.</p>
+<h2>Source</h2>
+<textarea id="source" class="form-control" style="height: 200px;"></textarea>
+<div class="text-center" style="margin: 15px;">
+  <input type="button" id="decode" value="Decode" class="btn btn-primary">
+</div>
+<h2>Result</h2>
+<textarea id="result" class="form-control" style="cursor:text; height: 200px;" readonly=""></textarea>
+<br />
+<script>
+$(document).ready(function(){
+  $("#decode").on("click", function() {
+    var result = htmlDecode($("#source").val());
+    $("#result").val(result);
+  });
+});
+
+function htmlEncode(value){
+  //create a in-memory div, set it's inner text(which jQuery automatically encodes)
+  //then grab the encoded contents back out.  The div never exists on the page.
+  return $('<div/>').text(value).html();
+}
+
+function htmlDecode(value){
+  return $('<div/>').html(value).text();
+}
+</script><p><br /></p>
