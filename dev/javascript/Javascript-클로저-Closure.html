@@ -47,7 +47,7 @@ base_5_seq(); // 7
 base_0_seq(); // 3
 </code></pre>
 <h2>성 능</h2>
-<p>성능과 관련된 글을 MDN에 잘 정리되어 있어서 참조를 했습니다.</p>
+<p>성능과 관련된 글을 <a href="https://developer.mozilla.org/ko/docs/JavaScript/Guide/Closures" target="_blank" class="tx-link">MDN</a>에 잘 정리되어 있어서 참조를 했습니다.</p>
 <blockquote>
 <p>클로져가 필요하지 않은 작업인데도 함수안에 함수를 만드는 것은 스크립트 처리 속도와 메모리 사용량 모두에서 현명한 선택이 아니다.</p>
 <p>예를들어 새로운 오브젝트나 클래스를 만들 때 오브젝트 생성자에 메쏘드를 정의하는 것 보다 오브젝트의 프로토타입에 정의하는것이 좋다. 오브젝트 생성자에 정의하게 되면 생성자가 불릴때마다 메쏘드가 새로 할당되기 때문이다.</p>
@@ -97,9 +97,9 @@ MyObject.prototype.getMessage = function() {
 <p>클로저(Closure)는 언듯보면 유효범위(Scope)에 맞지 않는 동작을 보이는 듯 하나, 가비지 컬렉션(Gabage Collection)과 Javascript에서 function은 object라는 점을 고려하면 자연스러운 동작인 것을 확인 할 수 있습니다.</p>
 <p> 개인적으로 나중에 제가 읽고 다시 이해할 정도로 클로저(Closure)를 정리하다보니 내용이&nbsp;많이 부족하네요. 혹시 이해가 안되시면 댓글을 남겨주시면 내용을 추가하거나 아는한도 내에서 답변을 해드리겠습니다. (Javascript는 초보라서 사실 위에 내용도 정확한지 잘 모르겠네요;;;) 또한 아래 제가 읽은 좋은 글들을 링크해 두었으니 참조하시면 될 것 같습니다.</p>
 <h2>참고자료</h2>
-<p><a href="https://developer.mozilla.org/ko/docs/JavaScript/Guide/Closures" target="_blank" class="tx-link">MDN 클로져(Closures)</a></p>
-<p><a href="http://blog.javarouka.me/2012/07/html5js-closure-scope-chain.html" target="_blank" class="tx-link">HTML5JS에서 발표한 Closure와 Scope Chain</a></p>
-<p><a href="http://rhio.tistory.com/208" target="_blank" class="tx-link">Closure in javascript (자바스크립트에서 클로져는 무엇인가?)</a></p>
-<p><a href="http://blog.outsider.ne.kr/506" target="_blank" class="tx-link">자바스크립트 클로저(Closure)에 대해서...</a></p>
-<p><a href="http://blog.javarouka.me/2012/01/javascripts-closure.html" target="_blank" class="tx-link">자바스크립트의 클로저 (JavaScript's Closure)</a></p>
-<p><a href="http://layered.tistory.com/entry/%EB%B2%88%EC%97%AD-Explaining-Javascript-Scope-and-Closure" target="_blank" class="tx-link">[번역] Explaining Javascript Scope and Closure</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/JavaScript/Guide/Closures" target="_blank" class="tx-link">MDN 클로져(Closures)</a><br />
+<a href="http://blog.javarouka.me/2012/07/html5js-closure-scope-chain.html" target="_blank" class="tx-link">HTML5JS에서 발표한 Closure와 Scope Chain</a><br />
+<a href="http://rhio.tistory.com/208" target="_blank" class="tx-link">Closure in javascript (자바스크립트에서 클로져는 무엇인가?)</a><br />
+<a href="http://blog.outsider.ne.kr/506" target="_blank" class="tx-link">자바스크립트 클로저(Closure)에 대해서...</a><br />
+<a href="http://blog.javarouka.me/2012/01/javascripts-closure.html" target="_blank" class="tx-link">자바스크립트의 클로저 (JavaScript's Closure)</a><br />
+<a href="http://layered.tistory.com/entry/%EB%B2%88%EC%97%AD-Explaining-Javascript-Scope-and-Closure" target="_blank" class="tx-link">[번역] Explaining Javascript Scope and Closure</a></p>
