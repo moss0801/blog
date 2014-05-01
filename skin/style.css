@@ -88,8 +88,7 @@ header {
 .top-left-adsense { width: 336px; height: 280px; }
 @media(max-width: 500px) { 
   .top-left-adsense { width: 320px; height: 50px; } }
-
-.top-right-adsense { width: 336px; height: 280px; }
+  .top-right-adsense { width: 336px; height: 280px; }
 @media(max-width: 767px) { 
   .top-right-adsense { width: 320px; height: 50px; } 
   #top-right-adsense { display: none; }
