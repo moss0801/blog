@@ -32,6 +32,7 @@ a {
 
 body {
   background: @background-color;
+  padding-bottom: 50px;
 }
 
 .container {
@@ -203,7 +204,7 @@ article .action-container {
   font-size: 2em;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 article .action-container a {
@@ -235,7 +236,30 @@ article .article-tag-content {
 /* (e) tag */
 
 /* (s) 댓글 */
-.comment textarea {
+.comment-write {
+  padding-top: 15px;
+}
+
+.comment-textarea {
   width: 100%;
 }
+
+/* 링크 없는 이름 */
+.comment-list .name {
+  color: @gray;
+}
+
+/* 링크 있는 이름 */
+.comment-list .name a {
+  color: @gray-darker;
+}
+
+.comment-list .name a:hover {
+  text-decoration: underline;
+}
+
+.comment-list .control {
+  font-size: 12px;
+}
+
 /* (e) 댓글 */

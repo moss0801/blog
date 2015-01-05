@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="안녕하세요. 개발자 Moss입니다.">
+  <meta name="google-site-verification" content="S7QB8Z1_HltsqLoXmn_pnvwvzCS7LCi89b0Om7xCDuQ" />
   <title>[##_title_##] :: [##_page_title_##]</title>
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
   <!-- Latest compiled and minified CSS -->
   <!-- (s) jquery -->
   <script src="./images/jquery-1.11.0.min.js"></script>
@@ -173,7 +174,7 @@
                 </a>
               </div>
               <div class="replay-show-hide col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <a>
+                <a href="#rp" onclick="[##_article_rep_rp_link_##]">
                   <s_rp_count>[##_article_rep_rp_cnt_##] Reply</s_rp_count>
                 </a>
               </div>
@@ -192,9 +193,9 @@
                           <a href="[##_tb_rep_url_##]" onclick="window.open(this.href); return false" rel="external nofollow">[##_tb_rep_title_##]</a>
                         </h4>
                         <span class="from">
-                          Tracked from
-                          <span class="name">[##_tb_rep_site_##]</span>
+                          <span class="name"><strong>[##_tb_rep_site_##]</strong></span>
                         </span>
+                          &nbsp;
                         <span class="date">[##_tb_rep_date_##]</span>
                         <a href="#" onclick="[##_tb_rep_onclick_delete_##]; return false"
                   class="delete">
@@ -218,7 +219,7 @@
                     <s_rp_rep>
                       <div id='[##_rp_rep_id_##]'>
                         <div class="[##_rp_rep_class_##]">
-                          <span class="name">[##_rp_rep_name_##]</span>
+                          <span class="name"><strong>[##_rp_rep_name_##]</strong></span>
                           <span class="date">[##_rp_rep_date_##]</span>
                           <span class="control">
                             <a href="[##_rp_rep_link_##]" class="address">
@@ -243,10 +244,9 @@
                             <s_rp2_rep>
                               <div id='[##_rp_rep_id_##]'>
                                 <div class="[##_rp_rep_class_##]">
-                                  <span class="name">[##_rp_rep_name_##]</span>
+                                  <span class="name"><strong>[##_rp_rep_name_##]</strong></span>
                                   <span class="date">[##_rp_rep_date_##]</span>
-                                  <span
-                          class="control">
+                                  <span class="control">
                                     <a href="[##_rp_rep_link_##]" class="address">
                                       &nbsp;
                                       <span>댓글주소</span>
@@ -269,36 +269,35 @@
                 <!-- (s) 댓글 목록 -->
                 <!-- (s) 댓글 쓰기 -->
                 <s_rp_input_form>
-                  <div class="commentWrite">
+                  <div class="comment-write">
                     <s_rp_member>
                       <s_rp_guest>
-                        <p>
-                          <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" />
-                          <label for="name">: 이름</label>
-                        </p>
-                        <p>
-                          <input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" />
-                          블로그 관리자일 경우
-                    password field에 미리 비밀번호를 넣어놓기 위해 만들어 놓았던 치환자였으나, 지금은 사용되지 않음.. (현재는 블로그 관리자일 경우 password field가 나타나지 않음.)
-                          <label
-                      for="password">: 패스워드</label>
-                        </p>
-                        <p>
-                          <input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" />
-                          <label
-                      for="homepage">: 홈페이지</label>
-                        </p>
+                        <div class="form-group">
+                          <label for="[##_rp_input_name_##]">Name</label>
+                          <input type="text" class="form-control input-sm" name="[##_rp_input_name_##]" value="[##_guest_name_##]">
+                        </div>
+                        <div class="form-group">
+                          <label for="[##_rp_input_password_##]">Password</label>
+                          <input type="password" class="form-control input-sm" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]">
+                        </div>
+                        <div class="form-group">
+                          <label for="[##_rp_input_homepage_##]">Homepage</label>
+                          <input type="text" class="form-control homepage input-sm" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]">
+                        </div>
                       </s_rp_guest>
-                      <p class="secretWrap">
-                        <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" />
-                        <label for="secret">비밀글</label>
-                      </p>
+                      <div class="secretWrap form-group">
+                        <div class="checkbox">
+                          <label>
+                            비밀글 <input type="checkbox" name="[##_rp_input_is_secret_##]" />  
+                          </label>
+                        </div>
+                      </div>
                     </s_rp_member>
                     <p>
-                      <textarea name="[##_rp_input_comment_##]" rows="10" cols="50"></textarea>
+                      <textarea class="form-control comment-textarea" name="[##_rp_input_comment_##]" rows="7"></textarea>
                     </p>
                     <p>
-                      <input type="submit" value="댓글 달기" onclick="[##_rp_onclick_submit_##]" />
+                      <input class="btn btn-primary btn-sm center-block" type="submit" value="댓글 달기" onclick="[##_rp_onclick_submit_##]" />
                     </p>
                   </div>
                 </s_rp_input_form>
@@ -309,6 +308,27 @@
       </s_article_rep>
     </div>
     <!-- (e) content -->
-    <!-- (e) container--> </s_t3>
+    <!-- (e) container-->
+  </s_t3>
+  <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+  var sc_project=9777975; 
+  var sc_invisible=1; 
+  var sc_security="2110a631"; 
+  var scJsHost = (("https:" == document.location.protocol) ?
+  "https://secure." : "http://www.");
+  document.write("<sc"+"ript type='text/javascript' src='" +
+  scJsHost+
+  "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript>
+  <div class="statcounter"><a title="web statistics"
+  href="http://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="http://c.statcounter.com/9777975/0/2110a631/1/"
+  alt="web statistics"></a>
+  </div>
+</noscript>
+  <!-- End of StatCounter Code for Default Guide -->
 </body>
 </html>
