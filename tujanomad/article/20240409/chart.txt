@@ -1,0 +1,15 @@
+달러/원 환율, 미국 기준금리, 한국 기준금리
+- UsdKrwWithBaseTest
+- https://docs.google.com/spreadsheets/d/1VRmiUiCsm0xFgs28AdsR3sY6CfCrVH51aXNpNdcs05w/edit#gid=668066347
+
+달러/원 환율, 달러 인덱스
+- UsdKrwWithDollarIndexTest
+- https://docs.google.com/spreadsheets/d/1VRmiUiCsm0xFgs28AdsR3sY6CfCrVH51aXNpNdcs05w/edit#gid=164924812
+
+외환보유액
+
+- https://docs.google.com/spreadsheets/d/1wQX43JuDHlDYmvc0WLf7QwR6bwRIr_WimEv3dlOGKaA/edit#gid=648976560
+
+경상수지
+
+- https://docs.google.com/spreadsheets/d/19knLSZ8KoLI3RppPdumuw4de1zjUvlEpP2ifV0JwAAc/edit#gid=1777573616

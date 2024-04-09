@@ -1,0 +1,17 @@
+.container #content .entry-content .tt_article_useless_p_margin p {
+    line-height: 1.7em !important;
+    padding-bottom: 1.5em !important;
+}
+
+.container #content .entry-content .tt_article_useless_p_margin p:has(iframe) {
+    align: center;
+}
+
+.container #content .entry-content .tt_article_useless_p_margin blockquote {
+    padding-bottom: 0px !important;
+    margin-bottom: 20px !important;
+}
+
+.container #content .entry-content .tt_article_useless_p_margin blockquote p {
+    padding-bottom: 1.3em !important;
+}
